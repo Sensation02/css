@@ -1,0 +1,80 @@
+/* html {
+}
+
+main {
+  background: #893a3a46;
+}
+
+.h1 {
+  text-transform: capitalize;
+}
+
+.p1 {
+  border-left: 5px solid salmon;
+  background: rgba(250, 128, 114, 0.578);
+} */
+
+main {
+  background-color: rgb(85, 85, 85);
+  color: antiquewhite;
+  padding: 20px;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+.grid {
+  margin-bottom: 20px;
+}
+
+.grid_body {
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+}
+
+.grid_item {
+  text-align: center;
+  border: 2px dashed #a8a8a8c2;
+  padding: 30px;
+}
+
+/* /////////////////////////////////////////////////////////////////////// */
+
+.grid_wrapper > * {
+  background-color: rgb(85, 85, 85);
+  color: antiquewhite;
+  padding: 20px;
+  border: 2px dashed #a8a8a8c2;
+}
+
+.grid_wrapper > *:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.grid_wrapper {
+  display: grid;
+
+  grid-template:
+    [start] 'header header' 100px [row2]
+    [row2] 'aside main' 1fr [row-end] / 150px 1fr;
+
+  /* grid-template-columns: 150px 1fr;
+  grid-template-rows: 100px 1fr;
+  grid-template-areas:
+    'header header'
+    'aside main'; */
+}
+
+.grid_header {
+  grid-area: header;
+}
+.grid_aside {
+  grid-area: aside;
+}
+.grid_main {
+  grid-area: main;
+}
+
+/* /////////////////////////////////////////////////////////////////////// */
